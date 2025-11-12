@@ -1,8 +1,9 @@
-export default function Main({ card, options, value, onChange }) {
+export default function Main({ card, options, value, onChange, form }) {
   return (
     <main>
+      {form}
       <div className="container flex justify-between py-20 ">
-        <h2 className="featured-films">Featured films</h2>
+        <h2 className="labels">Featured films</h2>
         <div className="flex gap-10 align-items-center">
           <label htmlFor="select-genre">Search by genre:</label>
           <select className="select-box" name="genre" id="select-genre" value={value} onChange={onChange}>
