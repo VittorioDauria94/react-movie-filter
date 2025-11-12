@@ -3,7 +3,11 @@
   /* === COLORS === */
   --clr-black: #000000;
   --clr-white: #ffffff;
-
+  --clr-silver: #c0c0c0;
+  --clr-silver-shadow: rgba(192, 192, 192, 0.4);
+  --clr-blue-dark: #001436;
+  --clr-blue-deep: #0a0a0a;
+  --clr-light-silver: rgba(255, 255, 255, 0.8);
 
 }
 
@@ -29,6 +33,12 @@ ul {
 
 body {
   font-family: 'Cormorant Garamond', serif;
+  background-image: url(./assets/img/backgorund-cinema.png);
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-white);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 /* Layout */
@@ -42,6 +52,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .justify-between {
@@ -107,6 +121,69 @@ body {
 /* Header */
 
 header {
-  height: 120px;
   width: 100%;
+  height: 20vh;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+
+}
+
+.header-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  color: var(--clr-silver);
+  text-shadow: 0 0 35px var(--clr-silver-shadow);
+
+}
+
+.header-subtitle {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--clr-light-silver);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
+}
+
+/* Main */
+
+.cover-img {
+  height: 200px;
+}
+
+.featured-films {
+  font-weight: 400;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  color: var(--clr-light-silver);
+  text-transform: uppercase;
+
+}
+
+.select-box {
+  background: linear-gradient(to bottom, var(--clr-blue-dark), var(--clr-black));
+  color: var(--clr-silver);
+  border: 1px solid var(--clr-light-silver);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px var(--clr-light-silver);
+  box-shadow: 0 0 10px var(--clr-black) inset;
+}
+
+.select-box:hover {
+  border-color: var(--clr-silver);
+  box-shadow: 0 0 12px var(--clr-light-silver);
+}
+
+.select-box:focus {
+  border-color: var(--clr-white);
+  box-shadow: 0 0 15px var(--clr-light-silver);
 }
